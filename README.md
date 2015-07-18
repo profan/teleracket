@@ -7,11 +7,11 @@ Where I live
 RacketBot on Telegram, send me a message!
 
 I accept commands like /eval expr right now, may make it more telegram-friendly shortly.
-(also needs to accept /cmd@Username)
+Should work in group chats, since it also handles /cmd@BotName, not tested.
 
 Config
 ---------------
-Rename the defs.rkt.example to defs.rkt and replace configuration options with your own token, changing the settings as you wish.
+Rename the defs.rkt.example to defs.rkt and replace bot token with your own token, changing the settings as you wish.
 
 License
 ---------------

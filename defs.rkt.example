@@ -1,0 +1,11 @@
+#lang racket
+
+; credentials and update interval
+(define bot-token "token-goes-here")
+(define bot-poll-interval 1) ; seconds
+
+; per query limits
+(define bot-max-duration 1) ; seconds
+(define bot-max-memory 32) ; megabytes
+
+(provide bot-token bot-poll-interval bot-max-duration bot-max-memory)

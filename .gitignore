@@ -1,0 +1,4 @@
+.*.s??
+*.bak
+defs.rkt
+compiled/

@@ -6,7 +6,7 @@ Small Telegram Bot made out of boredom to act as a Racket REPL, aims to function
 
 Where I live
 ---------------
-RacketBot on Telegram, send me a message!
+TeleRacketBot on Telegram, send me a message!
 
 I accept commands like /eval expr right now, may make it more telegram-friendly shortly.
 Should work in group chats, since it also handles /cmd@BotName, not tested.

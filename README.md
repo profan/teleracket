@@ -2,6 +2,13 @@ racketbot
 ===============
 Small Telegram Bot made out of boredom to act as a Racket REPL, aims to function like a regular REPL, with the possiblity to start sandboxes for any given racket language and output images when they are produced.
 
+Where I live
+---------------
+RacketBot on Telegram, send me a message!
+
+I accept commands like /eval expr right now, may make it more telegram-friendly shortly.
+(also needs to accept /cmd@Username)
+
 Config
 ---------------
 Rename the defs.rkt.example to defs.rkt and replace configuration options with your own token, changing the settings as you wish.

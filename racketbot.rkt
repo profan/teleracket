@@ -49,17 +49,17 @@
 
 (define (handle-command sender command)
   (match command
-    [(pregexp "/eval\\s+(.+)" (and x (list _ ...))) ; first is string, second is regexp match
+    [(pregexp (format "/eval(?:@~a)?\\s+(.+)" bot-name) (and x (list _ ...))) ; first is string, second is regexp match
          (with-handlers
              ([exn:fail? (lambda (e) (format "evaluation error: ~a" e))])
            (sandbox-eval (call-with-input-string (cadr x) read)))]
-    [(pregexp "/create\\s+([^\\s]+)\\s+([^\\s]+)" (and x (list _ ...)))
+    [(pregexp (format "/create(?:@~a)?\\s+([^\\s]+)\\s+([^\\s]+)" bot-name) (and x (list _ ...)))
        (define name (cadr x))
        (define lang (caddr x))
        (displayln (format "[~a] Set up Sandbox \"~a\" with language ~a for ~a"
                           (current-date->string) name lang sender))
        (format "Your Sandbox \"~a\" with language ~a has been set up :)" name lang)]
-    [(pregexp "/list")
+    [(pregexp (format "/list(?:@~a)" bot-name))
        (displayln (format "[~a] Listing available sandboxes for: ~a" (current-date->string) sender))
        ""]
     [(pregexp "/.+") (format "Unknown Command: ~a" command)]

@@ -1,4 +1,4 @@
-racketbot
+teleracket
 ===============
 Small Telegram Bot made out of boredom to act as a Racket REPL, aims to function like a regular REPL, with the possiblity to start sandboxes for any given racket language and output images when they are produced.
 

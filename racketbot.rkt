@@ -28,7 +28,7 @@
   (url-open (format "~a/bot~a/~a?~a" base-url bot-token type params)))
 
 (define (make-message recipient message)
-  (list (cons 'chat_id (~a recipient)) (cons 'text (~a message))))
+  `((chat_id ,(~a recipient)) (text ,(~a message))))
 
 (define make-request (curry bot-request base-url bot-token))
 (define (fetch-bot-data method [params ""])
@@ -76,7 +76,7 @@
   (define update
     (fetch-bot-data 'getUpdates
                     (alist->form-urlencoded
-                     (list (cons 'offset (~a last-offset))))))
+                     `((offset . ,(~a last-offset))))))
   (define messages (hash-ref update 'result))
   (cond
     [(eq? messages '())
